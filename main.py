@@ -4,7 +4,6 @@ import telebot
 from telebot import types
 import requests
 from io import BytesIO
-from keep_alive import keep_alive
 
 # Enable logging
 logging.basicConfig(
@@ -276,8 +275,7 @@ def finalize_question(message, user_id, has_image=False, has_additional_info=Fal
         del user_data[user_id]
 
 def main():
-    keep_alive()  # 👈 this line goes before polling
-    bot.infinity_polling()  
+    bot.polling(none_stop=True)  
 
 if __name__ == "__main__":
     main()
