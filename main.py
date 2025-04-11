@@ -16,7 +16,7 @@ logger = logging.getLogger(__name__)
 TOKEN = os.environ.get("TELEGRAM_TOKEN")
 
 # Your Telegram User ID (messages will be forwarded to this ID)
-ADMIN_USER_ID = int(os.environ.get("ADMIN_USER_ID"))
+ADMIN_USER_ID = os.environ.get("ADMIN_USER_ID")
 
 # Initialize bot
 bot = telebot.TeleBot(TOKEN)
