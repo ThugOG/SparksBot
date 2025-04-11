@@ -13,10 +13,10 @@ logging.basicConfig(
 logger = logging.getLogger(__name__)
 
 # Your Telegram Bot Token
-TOKEN = os.environ.get("TELEGRAM_TOKEN")
+TOKEN = os.getenv("TELEGRAM_TOKEN")
 
 # Your Telegram User ID (messages will be forwarded to this ID)
-ADMIN_USER_ID = os.environ.get("ADMIN_USER_ID")
+ADMIN_USER_ID = os.getenv("ADMIN_USER_ID")
 
 # Initialize bot
 bot = telebot.TeleBot(TOKEN)
